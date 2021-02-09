@@ -15,12 +15,24 @@ Each of these housing features will have to be transformed in different ways in 
 
 The numeric variables, like number of bedrooms and above grade square feet are great indicators for our model, however, variables like MS Subclass (how the municipaility classifies the house) is still a categorical variable. The Ordinal variables were treated as a ranking scale, with the highest qualities being a 5 and the lowest a 1. The Nominal variables, on the other hand, had to ranking to the various categories, and thus were broken down into 1's and 0's. 
 
-Additional feature engineering created features with a higher correlation to the target, allowing for higher accuracy from the final predictions. 
+#### Feature Engineering
 
-
-In order to improve our model's performance, a few outliers were removed from the training dataset. 
+In order to improve our model's performance, a few outliers were removed from the training dataset. Removing the 4 data points below improved model performance. 
 
 <img src="/Images_and_Backup/outliers.png"/>
+
+New features were also created with stronger correlations with sale price, which ensured their datapoints could be captured in the model. 
+
+|Feature|Interaction Type|Pearson Correlation|
+|---|---|---|
+|Age Since Built|*Year Built subtracted from Year Sold*|-0.57 | 
+|Age Since Renovated|*Year Renovated subtracted from Year Sold*| -0.55| 
+|Total Living Squarefoot Quality|*Living Square Footage multiplied by overall Quality of Finishes*| 0.90| 
+|Garage Quality Square Footage|*Garage Square feet multiplied by Overall Quality of Finishes*|0.66 | 
+|Patio Quality|*All outdoor patio types added together*|0.41 | 
+
+From this, we selected features with a correlation above 0.45 and below -0.45, and to bring down the dimentionality of the dataset, we used a built-in scaler (*Scikit learn Standard Scaler*), and took the natural log of the sale prices. With regards to the sale price, taking the natural log not only brings down the sale price data by an order of magnitude but helps to normalize the distribution of sales price, as seen in the graphs below. 
+<img src = "Images_and_Backup/sale_price_distribution.png"  style="width: 250px; float: left;"/
 
 Several models were tested to identify which performed best on the training data. 
 
