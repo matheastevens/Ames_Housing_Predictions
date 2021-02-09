@@ -9,7 +9,7 @@ Develop a model to predict, to the highest degree accuracy available, housing pr
 
 To create a predictive model, we begin with a thorough investigation of the data provided. There data set contained extensive information of housing features. The data types could be broken down into three disctinct types: *nominal, ordinal, and numeric*. The image to the right breaks down the variables accordingly ([*image courtesy of NYC Data Science Academy*](https://nycdatascience.com/blog/student-works/studying-regression-model-efficacy-on-the-ames-housing-data-set/)). 
 
-<img src = 'https://nycdsa-blog-files.s3.us-east-2.amazonaws.com/2019/09/ML_project_variables-1-1024x576.png' style="width: 500px; float: right;">
+<img src = 'https://nycdsa-blog-files.s3.us-east-2.amazonaws.com/2019/09/ML_project_variables-1-1024x576.png' style="width: 300px; float: right;">
 
 Each of these housing features will have to be transformed in different ways in order to be able to create a model. 
 
@@ -20,6 +20,11 @@ Additional feature engineering created features with a higher correlation to the
 Several models were tested to identify which performed best on the training data. 
 
 ![plot](Images_and_Backup/Model Performance Graph.png)
+
+
+<img src="Images_and_Backup/Model Performance Graph.png">
+
+![](https://raw.github.com/matheastevens/Ames_Housing_Predictions/Images_and_Backup/model_perf_graph.png)
 
 
 
