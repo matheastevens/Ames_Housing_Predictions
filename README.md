@@ -17,14 +17,12 @@ The numeric variables, like number of bedrooms and above grade square feet are g
 
 Additional feature engineering created features with a higher correlation to the target, allowing for higher accuracy from the final predictions. 
 
+
+In order to improve our model's performance, a few outliers were removed from the training dataset. 
+
 Several models were tested to identify which performed best on the training data. 
 
-![plot](Images_and_Backup/Model Performance Graph.png)
-
-
-<img src="Images_and_Backup/Model Performance Graph.png">
-
-![](https://raw.github.com/matheastevens/Ames_Housing_Predictions/Images_and_Backup/model_perf_graph.png)
+![](/Images_and_Backup/model_perf_graph.png =300x200)
 
 
 
