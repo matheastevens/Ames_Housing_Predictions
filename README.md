@@ -20,9 +20,11 @@ Additional feature engineering created features with a higher correlation to the
 
 In order to improve our model's performance, a few outliers were removed from the training dataset. 
 
+<img src="/Images_and_Backup/outliers.png"/>
+
 Several models were tested to identify which performed best on the training data. 
 
-![](/Images_and_Backup/model_perf_graph.png =300x200)
+<img src="/Images_and_Backup/model_perf_graph.png" alt="drawing" style="width: 250px; float: left;"/>
 
 
 
