@@ -31,16 +31,27 @@ New features were also created with stronger correlations with sale price, which
 |Garage Quality Square Footage|*Garage Square feet multiplied by Overall Quality of Finishes*|0.66 | 
 |Patio Quality|*All outdoor patio types added together*|0.41 | 
 
-From this, we selected features with a correlation above 0.45 and below -0.45, and to bring down the dimentionality of the dataset, we used a built-in scaler (*Scikit learn Standard Scaler*), and took the natural log of the sale prices. With regards to the sale price, taking the natural log not only brings down the sale price data by an order of magnitude but helps to normalize the distribution of sales price, as seen in the graphs below. 
-<img src = "Images_and_Backup/sale_price_distribution.png"  style="width: 250px; float: left;"/
+From this, we selected features with a correlation above 0.45 and below -0.45, and to bring down the dimentionality of the dataset, we used a built-in scaler (*Scikit learn Standard Scaler*), and took the natural log of the sale prices. With regards to the sale price, taking the natural log not only brings down the sale price data by an order of magnitude but helps to normalize the distribution of sales price, as seen in the graphs below. While there is still a skew, it is much more normal than the original sale price distribution. 
+
+<img src = "/Images_and_Backup/sale_price_distribution.png"  style="width: 250px; float: left;"/>
+
 
 Several models were tested to identify which performed best on the training data. 
 
 <img src="/Images_and_Backup/model_perf_graph.png" alt="drawing" style="width: 250px; float: left;"/>
 
+Unsurprisingly, the Random Forest and AdaBoost models were very overfit, however their results in the Kaggle competition were competitive with the other models, as outlined below. 
 
+|Model|Kaggle Score|
+|---|---|
+|SVM|24,324|
+|Ridge Linear Regression|24,334| 
+|Lasso Linear Regression|24,444| 
+|Ada Boost|29,109| 
+|Random Forest|29,301| 
+|KNN|33,325| 
 
-### Conculsions and Recommendations
+## Feature Importance
 
 The model presented can, with 90% confidence, predict the sale price for housing in Ames. 
 Key features include:
@@ -50,12 +61,9 @@ Key features include:
  - Whether a house has a concerete foundation
  - Neighborhood
 
-While this list is not exhaustive, it is no surprices that these items re the top of the list: house prices are often a reflection of the quality of materials used, the quality of the kitchen, square footage, foundation and neighborhood. What this model tell us over and above common-sense pricing, however, is whether a listing over or under priced. 
+While this list is not exhaustive, it is no surprices that these items are the top of the list: house prices are often a reflection of the quality of materials used, the quality of the kitchen, square footage, foundation and neighborhood. What this model tell us over and above common-sense pricing, however, is whether a listing over or under priced. 
 
-Through also examining other factors, like garage type, age, fireplace quality, masonry and unfinished basement square footage, the model empowers home buyers in Ames to identify opportunities for under-valued homes or flag homes which are over-prices for the features present. 
-
-The model is capable of predicting a house sale price within an 87 - 90% accuracy. Next steps would include exploring additional feature engineering to increase the model's generalization for future sales prices. 
-
+Through also examining other factors, like garage type, age, fireplace quality, masonry and unfinished basement square footage, the model empowers home buyers in Ames to identify opportunities for under-valued homes or flag homes which are over-priced for the features present. Of coruse there will always be room for negotiation in home sales, however, the models explored in this project can help provide another quanitative measure in the process of home buying or selling. 
 
 ## Data Dictionary 
 A complete data dictionary is available [here](https://www.kaggle.com/c/dsi-us-11-project-2-regression-challenge/data).
