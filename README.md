@@ -19,7 +19,7 @@ The numeric variables, like number of bedrooms and above grade square feet are g
 
 In order to improve our model's performance, a few outliers were removed from the training dataset. Removing the 4 data points below improved model performance. 
 
-<img src="/Images_and_Backup/outliers.png"/>
+<img src="/Images and Backup/outliers.png"/>
 
 New features were also created with stronger correlations with sale price, which ensured their datapoints could be captured in the model. 
 
