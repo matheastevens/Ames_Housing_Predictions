@@ -33,12 +33,12 @@ New features were also created with stronger correlations with sale price, which
 
 From this, we selected features with a correlation above 0.45 and below -0.45, and to bring down the dimentionality of the dataset, we used a built-in scaler (*Scikit learn Standard Scaler*), and took the natural log of the sale prices. With regards to the sale price, taking the natural log not only brings down the sale price data by an order of magnitude but helps to normalize the distribution of sales price, as seen in the graphs below. While there is still a skew, it is much more normal than the original sale price distribution. 
 
-<img src = "/Images_and_Backup/sale_price_distribution.png"  style="width: 250px; float: left;"/>
+<img src = "/Images and Backup/sale_price_distribution.png"  style="width: 250px; float: left;"/>
 
 
 Several models were tested to identify which performed best on the training data. 
 
-<img src="/Images_and_Backup/model_perf_graph.png" alt="drawing" style="width: 250px; float: left;"/>
+<img src="/Images and Backup/model_perf_graph.png" alt="drawing" style="width: 250px; float: left;"/>
 
 Unsurprisingly, the Random Forest and AdaBoost models were very overfit, however their results in the Kaggle competition were competitive with the other models, as outlined below. 
 
