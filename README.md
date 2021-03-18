@@ -1,6 +1,6 @@
 # Ames Housing Predictions
 
-The Ames Assessor’s Office released a data set of assessed values for individual residential properties sold in Ames, Iowa from 2006 to 2010. The data set contains 
+The Ames Assessor’s Office released a data set of assessed values for individual residential properties sold in Ames, Iowa from 2006 to 2010.
 
 ### Problem Statement
 Develop a model to predict, to the highest degree accuracy available, housing prices in Ames Iowa. 
